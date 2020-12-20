@@ -19,6 +19,8 @@
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
+				<label for="filtar-tabela">Buscar paciente</label>
+				<input type="text" name="filto" id="filtar-tabela">
 				<table>
 					<thead>
 						<tr>
@@ -71,36 +73,43 @@
 						</tr>
 					</tbody>
 				</table>
-
+				<span id="erro-api" class="btn-span invisivel">Erro ao buscar dados.</span>
+				<button id="buscar-paciente-api" class="botaoApi">Buscar da API</button>
 			</section>
 		</main>
 
 		<!-- ... -->
 		<section class="container">
 			<h2 id="titulo-form">Adicionar novo paciente</h2>
-			<form id="formulario">
-				<div class="grupo">
+			<ul id="mensagem-error"></ul>
+			<form id="formulario" class="formulario">
+				<div class="grupo1">
 					<label for="nome">Nome:</label>
-					<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
-				</div>
-				<div class="grupo">
-					<label for="peso">Peso:</label>
-					<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
-				</div>
-				<div class="grupo">
-					<label for="altura">Altura:</label>
-					<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
-				</div>
-				<div class="grupo">
-					<label for="gordura">% de Gordura:</label>
-					<input id="gordura" name="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+					<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo1">
 				</div>
 
+				<div class="inline">
+					<div class="grupo">
+						<label for="peso">Peso:</label>
+						<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo">
+					</div>
+					<div class="grupo">
+						<label for="altura">Altura:</label>
+						<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo ">
+					</div>
+					<div class="grupo">
+						<label for="gordura">% de Gordura:</label>
+						<input id="gordura" name="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo ">
+					</div>
+				</div>
 				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
 			</form>
 		</section>
 
 		<script src="js/calcula-imc.js"></script>
 		<script src="js/form.js"></script>
+		<script src="js/remover-paciente.js"></script>
+		<script src="js/filtra.js"></script>
+		<script src="js/api-pacientes.js"></script>
 	</body>
 </html>
